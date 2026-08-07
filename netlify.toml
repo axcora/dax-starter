@@ -1,0 +1,31 @@
+[build]
+  command = "dotnet publish -c Release -o bin && dotnet bin/DAX.dll build"
+  publish = "site"
+
+[build.environment]
+  DOTNET_VERSION = "9.0"
+  DOTNET_NOLOGO = "true"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+  conditions = {Role = ["admin"]}
+
+# DAX is static - cache forever
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.xml"
+  [headers.values]
+    Content-Type = "application/xml"

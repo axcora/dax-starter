@@ -1,0 +1,9 @@
+{
+  "buildCommand": "dotnet publish -c Release -o bin && dotnet bin/DAX.dll build",
+  "outputDirectory": "site",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "devCommand": "dotnet run -- start",
+  "installCommand": "dotnet --info"
+}

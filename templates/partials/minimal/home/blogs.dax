@@ -1,0 +1,21 @@
+<div class="bento-card span-12">
+<h2 class="text-center p-3"><a href="{{url}}">{{blog.title}}</a></h2>
+<div class="bento">
+{% for p in collections.posts limit:4 %}
+<div class="bento-card span-6">
+{% if metadata.image %}<a href="{{p.url}}"><img class="img-post shadow-sm" 
+width="100%" height="100%"
+alt="{{p.title}}"
+src="{{p.image or metadata.image}}"
+/></a>{% endif %}
+<h3><a href="{{p.url}}">{{p.title}}</a></h3>
+<p>
+{{p.description}}
+</p>
+</div>
+{% endfor %}
+</div>
+<div class="col-12 text-center p-5">
+<a href="{{blog.button.url}}" class="text-white btn btn-secondary">{{blog.button.text}}</a>
+</div>
+</div>

@@ -1,0 +1,5 @@
+{% if image %}<img class="img-cover" 
+width="100%" height="100%"
+alt="{{title}}"
+src="{{image}}"
+/>{% endif %}

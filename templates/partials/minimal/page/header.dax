@@ -1,0 +1,9 @@
+<header class="container p-3 mt-3">
+<h1 class="hero-title"><a href="{{url}}">{{title}}</a></h1>
+<nav aria-label="breadcrumb" class="navbar">
+ <ul class="navbar-nav mt-3">
+      <li class="nav-item"><a class="nav-link text-dark" href="{{metadata.url}}">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="{{url}}">{{title}}</a></li>
+    </ul>
+</nav>
+</header>

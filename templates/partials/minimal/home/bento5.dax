@@ -1,0 +1,20 @@
+<div class="bento-card span-8 mb-2 text-center">
+<img class="img-fluid" width="64" height="64" 
+alt="{{footer.title}}"
+loading="lazy"
+src="{{footer.icon}}"/>
+<h3>{{footer.title}}</h3>
+<p>{{footer.text}}</p>
+
+<div class="bento">
+{% for s in footer.item %}<div class="bento-card span-4">
+<img class="img-fluid" width="64" height="64" 
+src="{{s.icon}}" 
+alt="{{s.title}}"
+/>
+<h3>{{s.title}}</h3>
+<p>{{s.text}}</p>
+</div>{% endfor %}
+
+</div>
+</div>

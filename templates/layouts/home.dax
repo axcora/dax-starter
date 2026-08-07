@@ -1,0 +1,14 @@
+---
+layout: minimal.dax
+---
+{% include minimal/home/header.dax %}
+<main class="container p-3">
+<div class="bento">
+{% include minimal/home/bento1.dax %}
+{% include minimal/home/bento2.dax %}
+{% include minimal/home/bento3.dax %}
+{% include minimal/home/blogs.dax %}
+{% include minimal/home/bento4.dax %}
+{% include minimal/home/bento5.dax %}
+</div>
+</main>

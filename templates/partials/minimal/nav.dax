@@ -1,0 +1,14 @@
+<nav class="navbar p-3 shadow-sm">
+<div class="container">
+  <a class="navbar-brand ms-3" href="{{metadata.url}}">{{metadata.navbar.title}}</a>
+  <button class="navbar-toggler text-dark" onclick="document.querySelector('.navbar-collapse').classList.toggle('show')">☰</button>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav mt-3">
+      {% for nav in metadata.navbar.list %}
+      <li class="nav-item"><a class="nav-link text-dark" href="{{nav.url}}">
+      {{nav.title}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  </div>
+</nav>

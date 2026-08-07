@@ -1,0 +1,32 @@
+---
+layout: minimal.dax
+---
+<main class="container">
+<header class="container p-3 mt-3">
+<h1 class="hero-title"><a href="{{url}}">{{tag}}</a></h1>
+<nav aria-label="breadcrumb" class="navbar">
+ <ul class="navbar-nav mt-3">
+      <li class="nav-item"><a class="nav-link text-dark" href="{{metadata.url}}">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="/tags/">Tags</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="{{url}}">{{tag}}</a></li>
+    </ul>
+</nav>
+</header>
+
+<div class="bento">
+{% for post in posts %}
+<div class="bento-card span-4">
+<a href="{{post.url}}">
+{% if metadata.image %}<img class="img-post" 
+width="100%" height="100%"
+alt="{{post.title}}"
+src="{{post.image or metadata.image}}"
+/>{% endif %}
+</a>
+<h2 class="mb-2"><a href="{{post.url}}">{{post.title}}</a></h2>
+<p>{{post.description}}</p>
+</div>
+{% endfor %}
+</div>
+
+</main>

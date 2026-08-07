@@ -1,0 +1,7 @@
+<div class="bento-card span-4 bg-dark">
+<h2 class="text-center">{{start.title}}</h2>
+<img class="img-fluid" alt="{{start.title}}" width="100%" height="100%" loading="lazy"
+src="{{start.image}}"/>
+<p>{{start.text}}</p>
+<a href="{{start.button.url}}" class="btn btn-light">{{start.button.text}}</a>
+</div>

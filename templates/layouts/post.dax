@@ -1,0 +1,11 @@
+---
+layout: minimal.dax
+---
+{% include minimal/post/header.dax %}
+<main class="container p-3">
+{% include minimal/post/image-cover.dax %}
+<div class="bento">
+{% include minimal/post/article.dax %}
+{% include minimal/post/widget.dax %}
+</div>
+</main>

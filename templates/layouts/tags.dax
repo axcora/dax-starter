@@ -1,0 +1,23 @@
+---
+layout: minimal.dax
+---
+<main class="container">
+<header class="container p-3 mt-3">
+<h1 class="hero-title"><a href="{{url}}">{{metadata.title}} TAGS</a></h1>
+<nav aria-label="breadcrumb" class="navbar">
+ <ul class="navbar-nav mt-3">
+      <li class="nav-item"><a class="nav-link text-dark" href="{{metadata.url}}">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="/tags/">Tags</a></li>
+    </ul>
+</nav>
+</header>
+
+<div class="bento mb-3">
+{% for tag in tags %}
+<div class="bento-card span-3">
+<h2 class="mb-2"><a href="/tags/{{tag}}">{{tag}}</a></h2>
+</div>
+{% endfor %}
+</div>
+
+</main>

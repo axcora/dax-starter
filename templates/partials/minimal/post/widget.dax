@@ -1,0 +1,20 @@
+<div class="bento-card span-4 trans">
+<h3>About</h3>
+<img src="{{metadata.about.image}}" 
+alt="{{metadata.about.title}}" class="img-thumbnail mt-2 mb-3">
+<h3>{{metadata.about.title}}</h3>
+<p>{{metadata.about.description}}</p>
+<h3 class="mt-5">Lastest Post</h3>
+{% for i in collections.posts limit:3 %}
+<a href="{{ i.url }}/">
+{% if i.image %}<img class="img-fluid" alt="{{i.title}}" 
+width="100%" height="100%"
+src="{{i.image}}"/></a>{% endif %}
+<h3>{{i.title}}</h3>
+{% endfor %}
+<h3 class="mt-5">Tags</h3>
+{% for tag in tags %}
+<a href="/tags/{{ tag }}/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+{{tag}}
+</a>{% endfor %}
+</div>

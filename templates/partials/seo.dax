@@ -1,0 +1,40 @@
+<meta name="generator" content="DAX dotnet - Pure C# Slim SSG">
+<title>{{ title or metadata.title }}</title>
+<meta name="description" content="{{ description or metadata.description}}">
+<link rel="canonical" href="{{ metadata.url }}{{ url }}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="{{ metadata.title }}">
+<meta property="og:title" content="{{ title or metadata.title }}">
+<meta property="og:description" content="{{ description or metadata.description}}">
+<meta property="og:url" content="{{ metadata.url }}{{ url }}">
+<meta property="og:image" content="{{ metadata.url }}{{ image or metadata.image }}">
+<meta property="og:image:alt" content="{{ title or metadata.title }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title or metadata.title }}">
+<meta name="twitter:description" content="{{ description or metadata.description}}">
+<meta name="twitter:image" content="{{ metadata.url }}{{ image or metadata.image }}">
+<meta name="twitter:image:alt" content="{{ title or metadata.title }}">
+<link href="{{metadata.icon}}" rel="icon" type="image/x-icon">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ title or metadata.title }}",
+  "description": "{{ description or metadata.description}}",
+  "url": "{{ metadata.url }}{{ url }}",
+  "image": "{{ metadata.url }}{{ image or metadata.image }}",
+  "datePublished": "{{ date }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ metadata.author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ metadata.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ metadata.url }}/{{metadata.icon}}"
+    }
+  }
+}
+</script>

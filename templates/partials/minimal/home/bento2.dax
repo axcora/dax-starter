@@ -1,0 +1,10 @@
+<div class="bento-card span-4">
+{% for c in bento2.item %}<div class="card p-3 mb-2">
+<img class="img-fluid mb-3 shadow-sm" alt="{{ c.title }}"
+width="100%" height="100%" 
+loading="lazy" 
+src="{{ c.image }}"/>
+<h3><a href="{{ metadata.url }}">{{ c.title }}</a></h3>
+<p>{{ c.text }}</p>
+</div>{% endfor %}
+</div>

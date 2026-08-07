@@ -1,0 +1,5 @@
+<footer class="container text-center">
+<p>
+{{metadata.title}} built with <a href="https://dax.axcora.com">DAX</a>.
+</p>
+</footer>

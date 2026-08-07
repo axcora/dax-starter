@@ -1,0 +1,8 @@
+---
+layout: minimal.dax
+---
+{% include minimal/blog/header.dax %}
+<main class="container p-3">
+{% include minimal/blog/post-list.dax %}
+{% include minimal/blog/pagination.dax %}
+</main>

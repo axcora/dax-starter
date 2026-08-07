@@ -1,0 +1,13 @@
+<div class="bento-card span-12 mt-3">
+<ul class="pagination">
+  {% if pagination.prev_url %}<li class="page-item">
+    <a class="page-link me-2" href="{{ pagination.prev_url }}" tabindex="-1">← Previous</a>
+  </li>{% endif %}
+  <li class="page-item active">
+    <span class="page-link">Page {{ pagination.current_page }}</span>
+    </li>
+    {% if pagination.next_url %}<li class="page-item">
+        <a class="page-link ms-2" href="{{ pagination.next_url }}">Next →</a>
+    </li>{% endif %}
+</ul>
+</div>

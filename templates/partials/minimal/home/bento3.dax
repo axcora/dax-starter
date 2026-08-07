@@ -1,0 +1,8 @@
+{% for d in bento3.item %}<div class="bento-card span-3">
+<img width="64" height="64" 
+alt="{{d.title}}"
+loading="lazy" 
+src="{{d.icon}}"/>
+<h3><a href="{{url}}">{{d.title}}</a></h3>
+<p>{{d.text}}</p>
+</div>{% endfor %}

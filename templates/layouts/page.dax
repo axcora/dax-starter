@@ -1,0 +1,15 @@
+---
+layout: minimal.dax
+---
+{% include minimal/page/header.dax %}
+<main class="container p-3">
+{% include minimal/post/image-cover.dax %}
+<div class="bento">
+<div class="bento-card span-12">
+<h2>{{description}}</h2>
+<div class="mt-3 content p-3">
+{{content}}
+</div>
+</div>
+</div>
+</main>

@@ -1,0 +1,10 @@
+<div class="bento-card span-8 bg-dark">
+<h2 class="bento-title"><a class="text-white" href="{{metadata.url}}">{{bento1.title}}</a></h2>
+<p>{{bento1.text}}</p>
+<img class="img-fluid shadow-sm mt-2 mb-3" alt="{{bento1.title}}"
+width="100%" heigth="100%"
+src="{{bento1.image}}"/>
+<h3>{{bento1.article.title}}</h3>
+{% for p in bento1.article.info %}<p>{{p.text}}</p>{% endfor %}
+<a href="{{bento1.button.url}}" class="btn btn-light mt-3" >{{bento1.button.text}} →</a>
+</div>
