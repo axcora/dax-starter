@@ -1,6 +1,6 @@
 title: MINIMAL
 description: "Minimal is a simple and clean theme for DAX Static Site Generator. It is designed to be lightweight and fast, with a focus on content and readability."
-url: http://localhost:8080
+url: https://dax-starter.vercel.app/
 author: axcora
 image: /img/dax-primary-logo.png
 icon: /img/favicon.webp
