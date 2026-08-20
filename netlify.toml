@@ -1,15 +1,17 @@
 [build]
-  command = "dotnet run -- build"
+  command = "dotnet publish -c Release -o bin && dotnet bin/DAX.dll build"
   publish = "site"
 
 [build.environment]
-  DOTNET_VERSION = "9.0.0"
+  DOTNET_VERSION = "9.0"
+  DOTNET_NOLOGO = "true"
 
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[headers]]
   for = "/css/*"
