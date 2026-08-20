@@ -1,6 +1,6 @@
 {
   "installCommand": "curl -sSL https://dot.net/v1/dotnet-install.sh -o /tmp/dotnet-install.sh && bash /tmp/dotnet-install.sh --channel 9.0 --install-dir /tmp/dotnet",
-  "buildCommand": "export DOTNET_ROOT=/tmp/dotnet && export PATH=/tmp/dotnet:$PATH && dotnet publish -c Release -o bin && dotnet bin/Dax.dll build",
+  "buildCommand": "export DOTNET_ROOT=/tmp/dotnet && export PATH=/tmp/dotnet:$PATH && dotnet publish -c Release -o bin && ls bin && (dotnet bin/Dax.dll build || dotnet bin/Release/net9.0/linux-x64/Dax.dll build || dotnet run -- build)",
   "outputDirectory": "site",
   "framework": null
 }
